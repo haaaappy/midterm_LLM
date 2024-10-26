@@ -53,6 +53,6 @@ path: THUDM/chatglm3-6b
 
 上面是数据集中测试集中的一个数据样例，作为参照，下图中第一个例子给出的生成的广告语，意思明确清晰，介绍特点鲜明。
 
-下图中（path: Screenshot/AdvertiseGen_result/result_2.png）第二个例子是让模型生成十句不同的广告语，每一句就会段一些，只有两个分句了。
+下图中（path: Screenshot/AdvertiseGen_result/result_2.png）第二个例子是让模型生成十句不同的广告语，每一句就会相对短一些，只有两个分句。
 
 ![image-result_2](F:\midterm_LLM\Screenshot\AdvertiseGen_result\result_2.png)
