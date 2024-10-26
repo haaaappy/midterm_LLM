@@ -2,41 +2,53 @@
 
 ## Base Information
 
-Chosen base model: ChatGLM3-6B
+**Chosen base model:** ChatGLM3-6B （unzip the THUDM.rar, and the base model's path: THUDM/chatglm3-6b）
 
-Training Method: LoRA
+**Training Method:** LoRA （choose the config file lora.yaml when finetuning）
 
-Finetuning Dataset: AdvertiseGen Dataset
+**Finetuning Dataset:** AdvertiseGen Dataset（must be fixed to fit the model input shape）
 
 ## Dataset Preprocessing
 
-Code: data_preprocessing.py
+### code
 
-Origin Dataset: data/AdvertiseGen; Processed Dataset: data/AdvertiseGen_fix
+data_preprocessing.py
+
+### path
+
+Origin Dataset: ./finetune_demo/data/AdvertiseGen;
+
+Processed Dataset: ./finetune_demo/data/AdvertiseGen_fix
+
+### filename
 
 validation/test dataset: dev.json
 
 training dataset: train.json
 
-## Model Information
-
-ChatGLM3-6B：checkpoints
-
-path: THUDM/chatglm3-6b
-
 ## Running Basic Demo
+
+```
+cd basic_demo
+python cli_demo.py
+```
 
 ## Finetuning
 
-通过下面的命令行
+通过下面的命令行，运行finetune_hf.py文件，“..THUDM/chatglm3-6b”是需要被微调的模型的路径，输出文件的位置在lora.yaml文件中设置，默认为/output
 
->  python finetune_hf.py data/AdvertiseGen_fix/ ..THUDM/chatglm3-6b configs/lora.yaml
+```python
+cd finetune_demo
+python finetune_hf.py data/AdvertiseGen_ fix/ ..THUDM/chatglm3-6b configs/lora.yaml
+```
 
-来使用AdvertiseGen_fix数据集进行chatglm3-6b的微调，令其获取优秀的服饰广告能力
+来使用AdvertiseGen_fix数据集进行chatglm3-6b的微调，令其获取优秀的服饰广告语生成能力
 
 微调过程中的详细命令行输出过程和GPU情况，进行了截图，放在路径Screenshot/finetuning下
 
 ### finetuning_result
+
+Finetuning output file at output.rar. Use it when testing the finetuned model.
 
 > User: 写十句不同的买衣服的广告标语
 >
