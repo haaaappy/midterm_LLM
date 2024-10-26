@@ -38,9 +38,9 @@ path: THUDM/chatglm3-6b
 
 ### finetuning_result
 
-![image-20241026172944935](F:\midterm_LLM\Screenshot\AdvertiseGen_result\result_1)
+![image-20241026172944935](F:\midterm_LLM\Screenshot\AdvertiseGen_result\result_1.png)
 
-上面的图片是令模型直接写十句不同的衣服广告语。
+上面的图片（path: Screenshot/AdvertiseGen_result/result_1.png）是令模型直接写十句不同的衣服广告语。
 
 ```
 {"conversations": 
@@ -53,6 +53,6 @@ path: THUDM/chatglm3-6b
 
 上面是数据集中测试集中的一个数据样例，作为参照，下图中第一个例子给出的生成的广告语，意思明确清晰，介绍特点鲜明。
 
-下图中第二个例子是让模型生成十句不同的广告语，每一句就会段一些，只有两个分句了。
+下图中（path: Screenshot/AdvertiseGen_result/result_2.png）第二个例子是让模型生成十句不同的广告语，每一句就会段一些，只有两个分句了。
 
 ![image-20241026172825755](F:\midterm_LLM\Screenshot\AdvertiseGen_result\result_2.png)
