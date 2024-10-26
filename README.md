@@ -8,8 +8,6 @@ Training Method: LoRA
 
 Finetuning Dataset: AdvertiseGen Dataset
 
-
-
 ## Dataset Preprocessing
 
 Code: data_preprocessing.py
@@ -20,3 +18,14 @@ validation/test dataset: dev.json
 
 training dataset: train.json
 
+## Model Information
+
+ChatGLM3-6B：checkpoints
+
+path: THUMB/
+
+## Running Basic Demo
+
+## Finetuning
+
+截图 微调过程
