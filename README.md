@@ -34,4 +34,4 @@ path: THUDM/chatglm3-6b
 
 来使用AdvertiseGen_fix数据集进行chatglm3-6b的微调，令其获取优秀的服饰广告能力
 
-微调过程中的详细命令行输出过程和GPU情况，进行了截图，放在文件夹Screenshot_finetuning_process下
+微调过程中的详细命令行输出过程和GPU情况，进行了截图，放在路径Screenshot/finetuning下
