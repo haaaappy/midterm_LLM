@@ -125,6 +125,10 @@ Finetuning output file at output.rar. Use it when testing the finetuned model.
 
 只用了前六本，因为第七本书的文件数据杂乱，数据无法清洗以获取想要的内容，所以舍弃了第七本
 
+**Processed (Available) datasets:**  path: "./HarryPotterEnglish/datasets"
+
+这个路径下面还有处理原始数据用到的代码，生成可用数据集的代码，以及生成训练集测试集的代码
+
 **File format:** TXT, after processed, turned into JSON format
 
 #### Dataset Statistics
