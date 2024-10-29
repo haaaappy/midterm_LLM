@@ -6,13 +6,20 @@
 
 **Training Method:** LoRA （choose the config file lora.yaml when finetuning）
 
+## Running Basic Demo
+
+```
+cd basic_demo
+python cli_demo.py
+```
+
+## Finetuning_1——Advertisement
+
+### Dataset
+
 **Finetuning Dataset:** AdvertiseGen Dataset（must be fixed to fit the model input shape）
 
-## Dataset Preprocessing
-
-### code
-
-data_preprocessing.py
+**processing_code:** 处理原始数据集的代码，处理成微调数据集的格式：data_preprocessing.py
 
 ### path
 
@@ -26,14 +33,7 @@ validation/test dataset: dev.json
 
 training dataset: train.json
 
-## Running Basic Demo
-
-```
-cd basic_demo
-python cli_demo.py
-```
-
-## Finetuning
+### Implement
 
 通过下面的命令行，运行finetune_hf.py文件，“..THUDM/chatglm3-6b”是需要被微调的模型的路径，输出文件的位置在lora.yaml文件中设置，默认为/output
 
@@ -117,3 +117,10 @@ Finetuning output file at output.rar. Use it when testing the finetuned model.
 >
 > 10.英伦风简约裤，让你穿出优雅的时尚感。
 
+## Finetuning_2——Story Continuation
+
+### Dataset
+
+**Original datasets:** Harry Potter Series, 7 books, in the path: "./HarryPotterEnglish"
+
+**File format:** TXT, after processed, turned into JSON format
