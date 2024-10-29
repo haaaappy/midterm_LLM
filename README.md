@@ -44,7 +44,7 @@ python finetune_hf.py data/AdvertiseGen_ fix/ ..THUDM/chatglm3-6b configs/lora.y
 
 来使用AdvertiseGen_fix数据集进行chatglm3-6b的微调，令其获取优秀的服饰广告语生成能力
 
-微调过程中的详细命令行输出过程和GPU情况，进行了截图，放在路径Screenshot/finetuning下
+微调过程中的详细命令行输出过程和GPU情况，进行了截图，放在路径Screenshot/finetuning_1下
 
 ### finetuning_result
 
@@ -121,7 +121,7 @@ Finetuning output file at output.rar. Use it when testing the finetuned model.
 
 ### Dataset
 
-**Original datasets:** Harry Potter Series, 7 books, in the path: "./HarryPotterEnglish"
+**Original datasets:** Harry Potter Series, 7 books, in the path: "./HarryPotterEnglish/origin_books"
 
 只用了前六本，因为第七本书的文件数据杂乱，数据无法清洗以获取想要的内容，所以舍弃了第七本
 
@@ -137,3 +137,19 @@ Finetuning output file at output.rar. Use it when testing the finetuned model.
 | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ----- |
 | Size | 2973 | 3244 | 4040 | 6684 | 9109 | 5633 | 31683 |
 
+train_dataset: 30000
+
+test_dataset: 1683
+
+### Implement
+
+通过下面的命令行，运行finetune_hf.py文件，“..THUDM/chatglm3-6b”是需要被微调的模型的路径，输出文件的位置在lora.yaml文件中设置，设置为./output_StoryContinuation_HP
+
+```python
+cd finetune_demo
+python finetune_hf.py ../HarryPotterEnglish ..THUDM/chatglm3-6b configs/lora.yaml
+```
+
+来使用自建的StoryContinuation_HP数据集进行chatglm3-6b的微调，令其获取哈利波特世界下的故事续写能力。
+
+微调过程中的详细命令行输出过程和GPU情况，进行了截图，放在路径Screenshot/finetuning_2下
