@@ -123,7 +123,7 @@ Finetuning output file at output.rar. Use it when testing the finetuned model.
 
 只用了前六本，因为第七本书的文件数据杂乱，数据无法清洗以获取想要的内容，所以舍弃了第七本
 
-**Processed (Available) datasets:**  path: "./HarryPotterEnglish/datasets"
+**Processed (Available) datasets:**  path: "./HarryPotterEnglish/datasets&processing_code"
 
 这个路径下面还有处理原始数据用到的代码，生成可用数据集的代码，以及生成训练集测试集的代码
 
@@ -151,9 +151,9 @@ training dataset: train.json
 
 ```python
 cd finetune_demo
-python finetune_hf.py ../HarryPotterEnglish ..THUDM/chatglm3-6b configs/lora.yaml
+python finetune_hf.py ../HarryPotterEnglish/datasets&processing_code ..THUDM/chatglm3-6b configs/lora.yaml
 ```
 
-来使用自建的StoryContinuation_HP数据集进行chatglm3-6b的微调，令其获取哈利波特世界下的故事续写能力。
+来使用自己获取并且生成的StoryContinuation_HP数据集进行大模型chatglm3-6b的微调，令其获取哈利波特世界下的故事续写能力。
 
 微调过程中的详细命令行输出过程和GPU情况，进行了截图，放在路径Screenshot/finetuning_2下
