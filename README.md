@@ -21,11 +21,9 @@ python cli_demo.py
 
 **processing_code:** 处理原始数据集的代码，处理成微调数据集的格式：data_preprocessing.py
 
-### path
+**Origin Dataset:** ./finetune_demo/data/AdvertiseGen;
 
-Origin Dataset: ./finetune_demo/data/AdvertiseGen;
-
-Processed Dataset: ./finetune_demo/data/AdvertiseGen_fix
+**Processed Dataset:** ./finetune_demo/data/AdvertiseGen_fix
 
 ### filename
 
@@ -140,6 +138,12 @@ Finetuning output file at output.rar. Use it when testing the finetuned model.
 train_dataset: 30000
 
 test_dataset: 1683
+
+### filename
+
+validation/test dataset: dev.json
+
+training dataset: train.json
 
 ### Implement
 
