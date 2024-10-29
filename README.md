@@ -123,4 +123,13 @@ Finetuning output file at output.rar. Use it when testing the finetuned model.
 
 **Original datasets:** Harry Potter Series, 7 books, in the path: "./HarryPotterEnglish"
 
+只用了前六本，因为第七本书的文件数据杂乱，数据无法清洗以获取想要的内容，所以舍弃了第七本
+
 **File format:** TXT, after processed, turned into JSON format
+
+#### Dataset Statistics
+
+| Book | 1    | 2    | 3    | 4    | 5    | 6    | total |
+| ---- | ---- | ---- | ---- | ---- | ---- | ---- | ----- |
+| Size | 2973 | 3244 | 4040 | 6684 | 9109 | 5633 | 31683 |
+
