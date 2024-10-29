@@ -151,7 +151,7 @@ training dataset: train.json
 
 ```python
 cd finetune_demo
-python finetune_hf.py ../HarryPotterEnglish/datasets&processing_code ..THUDM/chatglm3-6b configs/lora.yaml
+python finetune_hf.py  ../HarryPotterEnglish/datasets_and_processing_code  ../THUDM/chatglm3-6b  configs/lora.yaml
 ```
 
 来使用自己获取并且生成的StoryContinuation_HP数据集进行大模型chatglm3-6b的微调，令其获取哈利波特世界下的故事续写能力。
