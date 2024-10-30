@@ -44,7 +44,7 @@ python finetune_hf.py data/AdvertiseGen_ fix/ ..THUDM/chatglm3-6b configs/lora.y
 
 微调过程中的详细命令行输出过程和GPU情况，进行了截图，放在路径Screenshot/finetuning_1下
 
-### finetuning_result
+### Result
 
 Finetuning output file at output_advertise.rar. Use it when testing the finetuned model.
 
@@ -164,9 +164,15 @@ test_dataset: 1683
 
 利用GPT-4生成了十句表述不同意思相同的提示性语句，告诉模型下面需要根据给出的句子进行续写。在构建数据集时，随机挑选一句作为提供给模型的提示性语句，告诉模型要完成续写任务。
 
-##### From txt to json
+##### Constructing Method
 
-由于书本对话较多，分段比较频繁，一段话的平均28个词；为了数据集构建的便利
+> ./HarryPotter_en_get.py：将单个txt文件中的原始数据转为JSON格式的数据
+>
+> ./gather_and_split.py：将上述得到的多个JSON数据集合并成哈利波特故事续写数据集StoryContinuation_HP，并划分训练集和测试集
+
+由于书本对话较多，且分段比较频繁，一段话的平均只有28个词；为了数据集构建的便利，提取txt中每一段话的第一句话作为需要续写的句子，从它开始的连续段落，要求加起来超过300词，作为续写的输出。按照以上思路，进行续写故事数据集的构建。
+
+在六本书一共31683条数据中，划分出30000条作为训练集，其余为验证（测试）集
 
 ### filename
 
@@ -192,6 +198,10 @@ python finetune_hf.py  ../HarryPotterEnglish/datasets_and_processing_code  ../TH
 使用自己获取并且构建的StoryContinuation_HP数据集进行大模型chatglm3-6b的微调，令其获取哈利波特世界下的故事续写能力。
 
 微调过程中的详细命令行输出过程和GPU情况，进行了截图，放在路径Screenshot/finetuning_2下
+
+### Result
+
+
 
 ## Merge the model
 
