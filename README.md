@@ -37,7 +37,7 @@ training dataset: train.json
 
 ```python
 cd finetune_demo
-python finetune_hf.py data/AdvertiseGen_ fix/ ..THUDM/chatglm3-6b configs/lora.yaml
+python finetune_hf.py  your_data_path  base_model_path  configs/lora.yaml
 ```
 
 来使用AdvertiseGen_fix数据集进行chatglm3-6b的微调，令其获取优秀的服饰广告语生成能力
